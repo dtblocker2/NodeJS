@@ -1,0 +1,12 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "my first web server",
+  "license": "ISC",
+  "author": "dtblocker02",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
