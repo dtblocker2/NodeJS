@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node File Uploads</title>
+</head>
+<body>
+    <form action="/upload" enctype="multipart/form-data" method="post">
+        <input type="file" name="profile_pic" id="validated_custo_file" required>
+
+        <img src="<%= typeof filename == 'undefined'? '' : filename %>">
+
+        <br>
+        <label style="color: red;"><%= typeof message == 'undefined'? '' : message  %></label>
+        <!-- in above we used ternary operator in which we see blank if message is null else we see error if message is not null -->
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

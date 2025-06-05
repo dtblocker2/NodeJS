@@ -1,0 +1,24 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show x from server</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <h1>Value from server:</h1>
+  <p id="display-x">Loading...</p>
+
+  <script>
+    axios.get('http://localhost:3000/value')
+      .then(response => {
+        const x = response.data.x;
+        document.getElementById('display-x').textContent = x;
+      })
+      .catch(error => {
+        console.error('Error fetching x:', error);
+        document.getElementById('display-x').textContent = 'Error fetching data';
+      });
+  </script>
+</body>
+</html>

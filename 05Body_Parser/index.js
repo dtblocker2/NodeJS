@@ -1,6 +1,5 @@
 const bodyParser = require('body-parser');
 const express = require('express');
-const body_parser = require*('body-parser');
 
 var app = express(); //why we use var here?
 
